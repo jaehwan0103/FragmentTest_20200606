@@ -11,10 +11,18 @@ import kr.ptus.fragmenttest_20200606.R
 import kr.ptus.fragmenttest_20200606.adapter.StudentsAdapter
 import kr.ptus.fragmenttest_20200606.data.Students
 
-class StudentListFragment : Fragment() {
+class StudentListFragment : BaseFragment() {
 
     val studentList = ArrayList<Students>()
     lateinit var mStudentAdapter : StudentsAdapter
+
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,8 +32,11 @@ class StudentListFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_student_list,container,false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun setupEvent() {
+
+    }
+
+    override fun setValues() {
 
         studentList.add(Students("조경진", 1988, true))
         studentList.add(Students("김광철", 1966, true))
@@ -40,5 +51,6 @@ class StudentListFragment : Fragment() {
         listViewTxt.adapter = mStudentAdapter
 
     }
+
 
 }
