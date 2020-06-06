@@ -8,6 +8,15 @@ import kr.ptus.fragmenttest_20200606.fragments.StudentListFragment
 
 class MyViewPageAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
 
+    override fun getPageTitle(position: Int): CharSequence? {
+
+        if (position == 0){
+            return  "내 프로필"
+        }
+        else {
+            return "수강생 목록"
+        }
+    }
 
     override fun getItem(position: Int): Fragment {
 
