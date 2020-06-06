@@ -29,6 +29,18 @@ class StudentsAdapter (context: Context, resId : Int , list: List<Students> ) : 
 
         val stdprofile = row.findViewById<TextView>(R.id.studentProfile)
 
+        val data = mList.get(position)
+        val age = 2020 - data.age +1
+
+        var gender = "남성"
+
+        if (!data.gender){
+
+            gender = "여성"
+
+        }
+
+        stdprofile.text = "${data.name} (${age}세, ${gender})"
 
         return row
 
