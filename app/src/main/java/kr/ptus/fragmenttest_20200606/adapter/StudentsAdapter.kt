@@ -27,11 +27,7 @@ class StudentsAdapter (context: Context, resId : Int , list: List<Students> ) : 
 
         val row = tempRow!!
 
-        val nameTxt = row.findViewById<TextView>(R.id.studentNameTxt)
-        val ageTxt = row.findViewById<TextView>(R.id.studentAgeTxt)
-        val genderTxt = row.findViewById<TextView>(R.id.studentGenderTxt)
-
-
+        val stdprofile = row.findViewById<TextView>(R.id.studentProfile)
 
 
         return row
